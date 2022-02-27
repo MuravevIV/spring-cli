@@ -40,6 +40,9 @@ java -jar target/spring-cli-1.0-SNAPSHOT.jar --input=i --output=o
 
 ## Large tests example
 
+__Note:__ Tests with "Large" (case-sensitive) in their name are not executed during Maven's regular test phase.
+To run "Large" tests - specific profile (`large-tests`) should be active.
+
 See: [ExampleLargeTest](src/test/java/com/ilyamur/springcli/ExampleLargeTest.java)
 
 ### Running large tests
