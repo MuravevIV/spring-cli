@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import picocli.CommandLine;
 
 @Controller
-@CommandLine.Command(name = "file-seq-renamer", version = "1.0.0-SNAPSHOT", mixinStandardHelpOptions = true)
+@CommandLine.Command(name = "command-example", version = "1.0.0-SNAPSHOT", mixinStandardHelpOptions = true)
 public class PicocliApplication implements Runnable {
 
     @SuppressWarnings("FieldMayBeFinal")
