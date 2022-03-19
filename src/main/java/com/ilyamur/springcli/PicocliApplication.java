@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import picocli.CommandLine;
 
 @Controller
-@CommandLine.Command(name = "command-example", version = "1.0.0-SNAPSHOT", mixinStandardHelpOptions = true)
+@CommandLine.Command(version = "1.0.0-SNAPSHOT", mixinStandardHelpOptions = true)
 public class PicocliApplication implements Runnable {
 
     @SuppressWarnings("FieldMayBeFinal")
@@ -16,11 +16,6 @@ public class PicocliApplication implements Runnable {
     @SuppressWarnings("FieldMayBeFinal")
     @CommandLine.Option(names = {"-o", "--output"}, required = true, description = "Output directory")
     private String output;
-
-    public static void main(String[] args) {
-        int exitCode = new CommandLine(new PicocliApplication()).execute(args);
-        System.exit(exitCode);
-    }
 
     @Autowired
     private ExampleService exampleService;

@@ -1,12 +1,23 @@
 package com.ilyamur.springcli;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import picocli.CommandLine;
 
 @SpringBootApplication
-public class Application {
+public class Application implements CommandLineRunner {
 
     public static void main(String[] args) {
         new SpringApplication(Application.class).run(args);
+    }
+
+    @Autowired
+    private PicocliApplication picocliApplication;
+
+    @Override
+    public void run(String... args) {
+        (new CommandLine(picocliApplication)).execute(args);
     }
 }

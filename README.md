@@ -25,7 +25,7 @@ java -jar target/spring-cli-1.0-SNAPSHOT.jar --help
 ```
 
 ```
-Usage: command-example [-hV] -i=<input> -o=<output>
+Usage: <main class> [-hV] -i=<input> -o=<output>
   -h, --help              Show this help message and exit.
   -i, --input=<input>     Input directory
   -o, --output=<output>   Output directory
